@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Ratatype</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="/styles/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="/js/scripts.js" async defer></script>
+</head>
+
+<body>
+
+  <div class="container max-w-xl py-2.5 md:py-5 mx-auto">
+    <header class="flex-col justify-center items-center flex mb-[1.88rem] md:mb-[3.12rem]">
+      <a href="/" class="w-[150px] h-5 block">
+        <img src="/img/logo.svg" alt="Ratatype">
+      </a>
+    </header>
+
+    <div class="flex-col justify-start items-stretch gap-[0.94rem] md:gap-5 flex">
+      <div class="w-[6.25rem] h-[6.25rem] mx-auto">
+        <!-- <img src="/img/icon-star.svg" class="w-full h-full object-contain" alt="" role="presentation"> -->
+
+        <lottie-player src="/img/lottie-star-hello.json" background="transparent" speed="1"
+          class="w-full h-full relative top-[5px] left-[8px]" direction="1" mode="normal" autoplay></lottie-player>
+      </div>
+
+      <h1 class="text-5xl md:text-[4rem] font-extrabold leading-[1] text-center">Увійти</h1>
+
+      <a href="#" class="w-full btn btn-tertiary">
+        <span class="w-[1.5625rem] md:w-[1.875rem] h-[1.5625rem] md:h-[1.875rem] relative">
+          <img src="/img/logo-google.svg" class="w-full h-full object-contain" alt="" role="presentation">
+        </span>
+        <span>Google</span>
+      </a>
+
+      <p class="mt-0.5 md:mt-1 text-center text-[1.0625rem] md:text-xl font-medium leading-[1.5]">або</p>
+
+      <form class="flex-col justify-start items-stretch gap-[0.94rem] md:gap-5 flex" id="loginForm" novalidate>
+
+        <div class="form-line flex-col flex gap-[0.31rem]">
+          <div class="relative">
+            <input type="email" name="email" class="peer control-input" placeholder="Ел.пошта" value="borovyk@me.com"
+              required />
+
+            <label
+              class="control-label peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[1.0625rem] md:peer-placeholder-shown:text-xl peer-focus:top-[9px] peer-focus:-translate-y-0 peer-focus:text-base">
+              Ел. пошта
+            </label>
+          </div>
+
+          <p class="form-error">
+            Вкажіть вашу ел. пошту
+          </p>
+        </div>
+
+        <div class="form-line flex-col flex gap-[0.31rem]">
+          <div class="relative">
+            <input type="password" name="password" class="peer control-input" placeholder="Пароль" required />
+
+            <label
+              class="control-label peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-xl peer-focus:top-[9px] peer-focus:-translate-y-0 peer-focus:text-base">Пароль</label>
+          </div>
+
+          <p class="form-error">
+            Вкажіть ваш пароль
+          </p>
+
+          <a href="#"
+            class="self-start text-cyan-900 text-opacity-80 text-[0.875rem] md:text-base font-medium leading-snug underline hover:text-sky-500 hover:after:hidden transition">
+            Не пам'ятаєш пароль?
+          </a>
+        </div>
+
+        <button type="submit" class="w-full btn">
+          <span>Увійти</span>
+        </button>
+      </form>
+
+      <p class="text-center text-[1.0625rem] md:text-xl font-medium leading-[1.5]">
+        Ще не з нами? <a href="#"
+          class="font-bold underline hover:text-sky-500 hover:after:hidden transition">Зареєструватися</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

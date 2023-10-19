@@ -1,0 +1,48 @@
+@tailwind base;
+@layer base {
+  html {
+    @apply text-sky-950;
+  }
+
+  a,
+  button,
+  input,
+  select {
+    @apply focus-visible:outline-cyan-400 focus-visible:outline-offset-2 focus:after:hidden;
+  }
+}
+
+@tailwind components;
+@layer components {
+  .control-input {
+    @apply h-[3.75rem] md:h-[4.375rem] w-full px-[0.875rem] md:px-[0.8125rem] pt-[1.3rem] md:pt-[1.4rem] bg-slate-100 rounded-[0.625rem] border-2 border-cyan-900 border-opacity-10 text-black text-[1.0625rem] md:text-xl font-medium leading-[1.5] transition focus:ring-2 ring-cyan-400 ring-offset-2 outline-none focus-visible:outline-none placeholder:opacity-0;
+  }
+
+  .control-validated .control-input:not(:focus):invalid,
+  .control-validated .control-input:not(:focus).invalid {
+    @apply border-red-500;
+  }
+
+  .control-label {
+    @apply w-full absolute top-[9px] left-0 px-[0.9375rem] text-cyan-900 text-opacity-80 text-[0.875rem] md:text-base font-medium leading-snug truncate pointer-events-none  duration-150 ease-linear;
+  }
+
+  .form-error {
+    @apply m-0 text-red-500 text-[0.875rem] md:text-base font-medium leading-snug hidden;
+  }
+
+  .btn {
+    @apply relative px-5 py-2 my-1 bg-yellow-200 rounded-[0.625rem] border-2 border-yellow-400 justify-center items-center gap-[5px] flex transition shadow-btn cursor-pointer shadow-yellow-400 text-[1.0625rem] md:text-xl font-bold leading-[1.5]
+    after:content-[''] after:absolute after:-top-[2px] after:-bottom-[6px] after:-left-[2px] after:-right-[2px] after:rounded-[0.625rem] after:transition after:ring-cyan-400 after:ring-offset-2 
+    focus-visible:outline-none focus:after:block focus-visible:after:ring-2
+    hover:shadow-btn-hover hover:shadow-yellow-400 hover:-translate-y-[2px] hover:after:-bottom-[8px] 
+    active:translate-y-[3px] active:shadow-none 
+    disabled:bg-slate-100 disabled:border-gray-400 disabled:text-neutral-600 disabled:cursor-default disabled:translate-y-0 disabled:hover:shadow-btn disabled:active:shadow-btn disabled:shadow-gray-400 disabled:hover:shadow-gray-400 disabled:active:shadow-gray-400;
+  }
+
+  .btn-tertiary {
+    @apply bg-white border-sky-500 shadow-sky-500 hover:shadow-sky-500;
+  }
+}
+
+@tailwind utilities;
